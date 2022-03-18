@@ -37,7 +37,7 @@ public class RegistrousuarioTest {
 
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, String>();
-    vars.put("email", "grupo1.usach@usach6.cl");
+    vars.put("email", (Math.random()*100)+"-grupo1.usach@usach.cl");
     vars.put("password","12345678");
   }
   @After
