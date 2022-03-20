@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -30,9 +31,14 @@ public class Lab4grupo1dxcTest {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    // System.setProperty("webdriver.chrome.driver","/opt/chromedriver-2.28/chromedriver");
+    System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 
-    driver = new ChromeDriver();
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.addArguments("--no-sandbox");
+    chromeOptions.addArguments("--headless");
+    chromeOptions.addArguments("--remote-debugging-port=92222");
+
+    driver = new ChromeDriver(chromeOptions);
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
   }
@@ -42,7 +48,7 @@ public class Lab4grupo1dxcTest {
   }
   @Test
   public void lab4grupo1dxc() {
-    driver.get("http://localhost:8080/");
+    driver.get("http://localhost:8081/");
     driver.manage().window().setSize(new Dimension(976, 1040));
     driver.findElement(By.id("saldo")).click();
     driver.findElement(By.id("saldo")).sendKeys("40000000");
