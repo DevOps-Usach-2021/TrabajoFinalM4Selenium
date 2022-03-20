@@ -36,7 +36,6 @@ public class Lab4grupo1dxcTest {
     ChromeOptions chromeOptions = new ChromeOptions();
     chromeOptions.addArguments("--no-sandbox");
     chromeOptions.addArguments("--headless");
-    chromeOptions.addArguments("--remote-debugging-port=92222");
 
     driver = new ChromeDriver(chromeOptions);
     js = (JavascriptExecutor) driver;
