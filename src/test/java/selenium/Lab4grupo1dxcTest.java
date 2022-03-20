@@ -30,7 +30,7 @@ public class Lab4grupo1dxcTest {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
 
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
@@ -42,7 +42,7 @@ public class Lab4grupo1dxcTest {
   }
   @Test
   public void lab4grupo1dxc() {
-    driver.get("http://localhost:8080//");
+    driver.get("http://localhost:8080/");
     driver.manage().window().setSize(new Dimension(976, 1040));
     driver.findElement(By.id("saldo")).click();
     driver.findElement(By.id("saldo")).sendKeys("40000000");

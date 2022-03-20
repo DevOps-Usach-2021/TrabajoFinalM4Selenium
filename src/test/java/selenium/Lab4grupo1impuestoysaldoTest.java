@@ -30,7 +30,7 @@ public class Lab4grupo1impuestoysaldoTest {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
 
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
