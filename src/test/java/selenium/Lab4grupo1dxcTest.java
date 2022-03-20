@@ -30,7 +30,7 @@ public class Lab4grupo1dxcTest {
   JavascriptExecutor js;
   @Before
   public void setUp() {
-    System.setProperty("webdriver.chrome.driver","/opt/chromedriver-2.28/chromedriver");
+    // System.setProperty("webdriver.chrome.driver","/opt/chromedriver-2.28/chromedriver");
 
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
